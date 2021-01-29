@@ -24,7 +24,17 @@ decreaseEconomy.addEventListener('click', function () {
     decreaseCount(economyTicket)
 })
 
-
+//preventing negetive value from manual input
+firstClassTicket.addEventListener('keyup', function (e) {
+    if (e.keyCode == 109 || e.keyCode == 189) {
+        firstClassTicket.value = ''
+    }
+})
+economyTicket.addEventListener('keyup', function (e) {
+    if (e.keyCode == 109 || e.keyCode == 189) {
+        economyTicket.value = ''
+    }
+})
 
 
 
