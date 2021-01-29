@@ -121,3 +121,25 @@ a.active {
   display: flex;
   justify-content: space-between;
 }
+
+.plus-minus-btn button {
+  cursor: pointer;
+  width: 30px;
+  outline: none;
+  border: none;
+  padding: 5px;
+}
+.plusBtn {
+  background: greenyellow;
+  border: 1px solid rgb(163, 255, 25);
+}
+
+.minusBtn {
+  background: crimson;
+  border: 1px solid salmon;
+  color: white;
+}
+
+.error {
+  border: 2px solid crimson !important;
+}
