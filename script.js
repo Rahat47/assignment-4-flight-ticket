@@ -84,7 +84,7 @@ bookNowbtn.addEventListener('click', function () {
         reciept.innerHTML = `<h1>Please enter values to buy ticket </h1>
             <button class="refresh" onClick="window.location.reload();"> Try Again </button>
         `
-    } else if (!firstClass && !economy) {
+    } else if (!firstClass && !economy || firstClass == 0 && economy == 0) {
         reciept.innerHTML = `<h1>Please Choose at least one Ticket Class</h1>
         <button class="refresh" onClick="window.location.reload();"> Try Again </button>
         `
