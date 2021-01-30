@@ -28,24 +28,25 @@
 
     <!--Booking Section-->
     <main class="main-content container">
+
         <div class="booking-form">
             <h3>Booking Flights</h3>
             <div class="input-group">
                 <label for="">Flying From</label>
-                <input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
+                <input class="inp-style fly-from" type="text" name="" placeholder="Dhaka, Bangladesh">
             </div>
             <div class="input-group">
                 <label for="">Flying To</label>
-                <input class="inp-style" type="text" name="" placeholder="New York, United States">
+                <input class="inp-style fly-to" type="text" name="" placeholder="New York, United States">
             </div>
             <div class="inputs">
                 <div class="input-group">
                     <label" for="">Departure</label>
-                        <input class="inp-style" type="date" name="">
+                        <input class="departure" class="inp-style" type="date" name="">
                 </div>
                 <div class="input-group">
                     <label for="">Return</label>
-                    <input class="inp-style" type="date" name="">
+                    <input class="return" class="inp-style" type="date" name="">
                 </div>
             </div>
             <div class="input-group f-class">
@@ -75,7 +76,7 @@
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p>$500</p>
+                        <p>$<span id="subtotal">00</span> </p>
                     </div>
                 </div>
 
@@ -84,7 +85,7 @@
                         <p>Charge 10% VAT</p>
                     </div>
                     <div class="right">
-                        <p>$50</p>
+                        <p>$<span id="vat">00</span></p>
                     </div>
                 </div>
                 <hr>
@@ -93,23 +94,87 @@
                         <h4>Total</h4>
                     </div>
                     <div class="right">
-                        <p>$550</p>
+                        <p>$<span id="total">00</span></p>
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button id="book-now" class="btn-style">Book Now</button>
         </div>
 
         <div class="booking-content">
             <h1>discover <br> around the world</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias
-                veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise
+                veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt
+                nobise
                 voluptatibus quam</p>
         </div>
-        </section>
 
-        <!--Thank You-->
-        <script src="script.js"></script>
+    </main>
+
+    <section>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Details</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Flying From</td>
+                    <td class="fly-from-rec">Dynamic Data</td>
+                    <td> --- </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Flying To</td>
+                    <td class="fly-to-rec">Dynamic Data</td>
+                    <td> --- </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Departure</td>
+                    <td class="departure-rec">Dynamin Data</td>
+                    <td> --- </td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Return</td>
+                    <td class="return-rec">Dynmin Data</td>
+                    <td> --- </td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>First Class ($150)</td>
+                    <td class="firstClass-rec">Dynamin Data</td>
+                    <td class="firstClassAmount-rec"> --- </td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>Economy Class ($100)</td>
+                    <td class="economyClass-rec">Dynamin Data</td>
+                    <td class="economyClassAmount-rec"> --- </td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td colspan="2">Total Amount</td>
+                    <td class="total-rec">Dynamin Data</td>
+                </tr>
+                <tr>
+
+                    <td colspan="4" class="rec-msg">Thank you for choosing us. we hope you have a great flight and an
+                        amazing day.!!
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--Thank You-->
+    <script src="script.js"></script>
 </body>
 
 </html>

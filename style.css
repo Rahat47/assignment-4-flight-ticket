@@ -123,11 +123,13 @@ a.active {
 }
 
 .plus-minus-btn button {
+  margin-left: 20px;
   cursor: pointer;
   width: 30px;
   outline: none;
   border: none;
   padding: 5px;
+  font-size: 16px;
 }
 .plusBtn {
   background: greenyellow;
@@ -142,4 +144,34 @@ a.active {
 
 .error {
   border: 2px solid crimson !important;
+}
+
+.table {
+  background: whitesmoke;
+  height: auto;
+  width: 40%;
+  margin-left: 30px;
+  border-radius: 10px;
+  display: none;
+}
+.table > h1 {
+  color: crimson;
+  padding: 20px;
+}
+th {
+  padding: 20px;
+  border-radius: 10px;
+}
+tr {
+  background: whitesmoke;
+  border: 1px solid black;
+}
+td {
+  padding: 20px;
+  width: 100%;
+}
+.rec-msg {
+  font-size: 0.9em;
+  text-transform: uppercase;
+  font-weight: bold;
 }
