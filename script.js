@@ -34,18 +34,22 @@ decreaseEconomy.addEventListener('click', function () {
 
 //preventing negetive value from manual input
 firstClassTicket.addEventListener('keyup', function (e) {
-    if (e.keyCode == 109 || e.keyCode == 189) {
+    if (e.keyCode == 109 || e.keyCode == 189 || firstClassTicket.value < 0) {
         firstClassTicket.value = ''
         addSnackbar('Negetive values are not accepted')
+    } else {
+        calculateTotal()
     }
-    calculateTotal()
+
 })
 economyTicket.addEventListener('keyup', function (e) {
-    if (e.keyCode == 109 || e.keyCode == 189) {
+    if (e.keyCode == 109 || e.keyCode == 189 || economyTicket.value < 0) {
         economyTicket.value = ''
         addSnackbar('Negetive values are not accepted')
+    } else {
+        calculateTotal()
     }
-    calculateTotal()
+
 })
 
 // calulating value on chage
@@ -57,14 +61,14 @@ firstClassTicket.addEventListener('change', function () {
     }
 })
 economyTicket.addEventListener('change', function () {
-    if (firstClassTicket.value < 0) {
+    if (economyTicket.value < 0) {
         addSnackbar('Negetive values are not accepted')
     } else {
         calculateTotal()
     }
 })
 
-
+// calculate total value
 function calculateTotal() {
     let firstClassPrice = firstClassTicket.value * 150
     let economyPrice = economyTicket.value * 100
