@@ -116,6 +116,7 @@ a.active {
   color: #fff;
   font-weight: 500;
   background-color: #3352f2;
+  cursor: pointer;
 }
 .amount {
   display: flex;
@@ -130,9 +131,11 @@ a.active {
   border: none;
   padding: 5px;
   font-size: 16px;
+  border-radius: 5px;
 }
 .plusBtn {
-  background: greenyellow;
+  background: #3352f2;
+  color: white;
   border: 1px solid rgb(163, 255, 25);
 }
 
