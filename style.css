@@ -175,3 +175,14 @@ td {
   text-transform: uppercase;
   font-weight: bold;
 }
+
+.refresh {
+  margin: 10px 20px;
+  padding: 10px 20px;
+  background-color: rgb(211, 127, 0);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}

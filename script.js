@@ -81,9 +81,13 @@ bookNowbtn.addEventListener('click', function () {
 
     // condition check for empty values
     if (!flyTo || !flyFrom || !departure || !returnDate) {
-        reciept.innerHTML = `<h1>Please enter values to buy ticket </h1>`
+        reciept.innerHTML = `<h1>Please enter values to buy ticket </h1>
+            <button class="refresh" onClick="window.location.reload();"> Try Again </button>
+        `
     } else if (!firstClass && !economy) {
-        reciept.innerHTML = `<h1>Please Choose at least one Ticket Class</h1>`
+        reciept.innerHTML = `<h1>Please Choose at least one Ticket Class</h1>
+        <button class="refresh" onClick="window.location.reload();"> Try Again </button>
+        `
     }
 
     mainContent.style.setProperty('display', 'none')
