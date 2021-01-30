@@ -36,22 +36,32 @@ decreaseEconomy.addEventListener('click', function () {
 firstClassTicket.addEventListener('keyup', function (e) {
     if (e.keyCode == 109 || e.keyCode == 189) {
         firstClassTicket.value = ''
+        addSnackbar('Negetive values are not accepted')
     }
     calculateTotal()
 })
 economyTicket.addEventListener('keyup', function (e) {
     if (e.keyCode == 109 || e.keyCode == 189) {
         economyTicket.value = ''
+        addSnackbar('Negetive values are not accepted')
     }
     calculateTotal()
 })
 
 // calulating value on chage
 firstClassTicket.addEventListener('change', function () {
-    calculateTotal()
+    if (firstClassTicket.value < 0) {
+        addSnackbar('Negetive values are not accepted')
+    } else {
+        calculateTotal()
+    }
 })
 economyTicket.addEventListener('change', function () {
-    calculateTotal()
+    if (firstClassTicket.value < 0) {
+        addSnackbar('Negetive values are not accepted')
+    } else {
+        calculateTotal()
+    }
 })
 
 
@@ -81,13 +91,11 @@ bookNowbtn.addEventListener('click', function () {
 
     // condition check for empty values
     if (!flyTo || !flyFrom || !departure || !returnDate) {
-        reciept.innerHTML = `<h1>Please enter values to buy ticket </h1>
-            <button class="refresh" onClick="window.location.reload();"> Try Again </button>
-        `
+        addSnackbar('Please fill the nesessary information to book a ticket')
+        return
     } else if (!firstClass && !economy || firstClass == 0 && economy == 0) {
-        reciept.innerHTML = `<h1>Please Choose at least one Ticket Class</h1>
-        <button class="refresh" onClick="window.location.reload();"> Try Again </button>
-        `
+        addSnackbar('Please choose a ticket type to continue')
+        return
     }
 
     mainContent.style.setProperty('display', 'none')
@@ -128,4 +136,16 @@ function removeClass(from, className) {
 //add error class
 function addClass(from, className) {
     from.classList.add(className)
+}
+
+function addSnackbar(message) {
+    const snackbar = document.createElement('div')
+    snackbar.classList.add('snackbar')
+    document.querySelector('body').appendChild(snackbar)
+    snackbar.textContent = message
+    snackbar.classList.add('active')
+
+    setTimeout(() => {
+        snackbar.classList.remove('active')
+    }, 4000)
 }
